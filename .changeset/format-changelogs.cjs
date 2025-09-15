@@ -1,6 +1,6 @@
 const { getInfo } = require('@changesets/get-github-info');
 
-const repo = 'ijlee2/embroider-toolbox';
+const repo = 'ijlee2/create-v2-addon-repo';
 
 async function analyze(changeset) {
   const { links: info } = await getInfo({

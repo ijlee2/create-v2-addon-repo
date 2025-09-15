@@ -1,11 +1,11 @@
-[![This project uses GitHub Actions for continuous integration.](https://github.com/ijlee2/embroider-toolbox/actions/workflows/ci.yml/badge.svg)](https://github.com/ijlee2/embroider-toolbox/actions/workflows/ci.yml)
+[![This project uses GitHub Actions for continuous integration.](https://github.com/ijlee2/create-v2-addon-repo/actions/workflows/ci.yml/badge.svg)](https://github.com/ijlee2/create-v2-addon-repo/actions/workflows/ci.yml)
 
-# embroider-toolbox
+# create-v2-addon-repo
 
 
 ## What is it?
 
-`embroider-toolbox` provides a set of **tools and conventions** to help you introduce Embroider.
+`create-v2-addon-repo` provides a set of **tools and conventions** to help you introduce Embroider.
 
 
 ## Package overview

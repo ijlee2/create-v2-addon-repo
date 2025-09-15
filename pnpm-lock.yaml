@@ -18,8 +18,8 @@ importers:
         specifier: ^3.4.0
         version: 3.4.0
       update-workspace-root-version:
-        specifier: ^2.0.3
-        version: 2.0.3
+        specifier: ^2.0.4
+        version: 2.0.4
 
   configs/ember-template-lint:
     dependencies:
@@ -132,8 +132,8 @@ importers:
         specifier: ^3.0.5
         version: 3.0.5
       '@codemod-utils/package-json':
-        specifier: ^3.1.0
-        version: 3.1.0
+        specifier: ^3.1.1
+        version: 3.1.1
       yargs:
         specifier: ^18.0.0
         version: 18.0.0
@@ -419,13 +419,8 @@ packages:
     resolution: {integrity: sha512-DkHpvt+NbxTkvnudsr85zLYDsUEDkuS//vSG7LW7kGLTaO12BJujws68phna9W41JqDS5K798S71KA9rM+fa8A==}
     engines: {node: 20.* || >= 22}
 
-  '@codemod-utils/json@2.0.3':
-    resolution: {integrity: sha512-ndpoAYT/s4AZKyi5RIlfhuMbCkOjpbOVHhcYYxcRVq/Imho49gysYxcpOUtslLRFlrk8GVu4fuUXGNM/EqlIXA==}
-    engines: {node: 20.* || >= 22}
-    deprecated: Package has been renamed. Please install @codemod-utils/package-json@3.0.0 or above.
-
-  '@codemod-utils/package-json@3.1.0':
-    resolution: {integrity: sha512-5B5OVnB0CyUHZQIMA3DeZvdCIeJaLjic46tdDWtGY/3zG+4qDKeckmhMoCV8+CEBtYZoXU8Eq+6J67rzI3rR2A==}
+  '@codemod-utils/package-json@3.1.1':
+    resolution: {integrity: sha512-zQVov7goRLlCLQ/Bj/aY6vwruUauIcNJBEVgPzy5LeXoTu8qL5JN8iwpUNi6cotSp58p85w+Vcmafx6C9UKFGg==}
     engines: {node: 20.* || >= 22}
 
   '@codemod-utils/tests@2.0.4':
@@ -1957,8 +1952,8 @@ packages:
     peerDependencies:
       browserslist: '>= 4.21.0'
 
-  update-workspace-root-version@2.0.3:
-    resolution: {integrity: sha512-1zw7tkx9fBekETQOOgww3L0QbEIPhRvYrItcp7dM3mMnmbzd/hP0uMSavwRBbB/iHbsAHSooNKFrEUa8i8JxEw==}
+  update-workspace-root-version@2.0.4:
+    resolution: {integrity: sha512-WezuKZjTYq4pFU9mm7Cd7qpoEXmplepweijZhfx3fmPBHATWZ1uUrxXS/uOk1Eb/rt7uz+9Yl1CNtjUaFebIxg==}
     engines: {node: 20.* || >= 22}
     hasBin: true
 
@@ -2365,11 +2360,7 @@ snapshots:
     dependencies:
       glob: 11.0.3
 
-  '@codemod-utils/json@2.0.3':
-    dependencies:
-      type-fest: 4.41.0
-
-  '@codemod-utils/package-json@3.1.0':
+  '@codemod-utils/package-json@3.1.1':
     dependencies:
       type-fest: 4.41.0
 
@@ -3916,10 +3907,10 @@ snapshots:
       escalade: 3.2.0
       picocolors: 1.1.1
 
-  update-workspace-root-version@2.0.3:
+  update-workspace-root-version@2.0.4:
     dependencies:
       '@codemod-utils/files': 3.0.5
-      '@codemod-utils/json': 2.0.3
+      '@codemod-utils/package-json': 3.1.1
       yargs: 18.0.0
 
   uri-js@4.4.1:

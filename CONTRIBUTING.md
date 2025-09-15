@@ -123,7 +123,7 @@ Here are some guidelines to help you and everyone else.
 
 <summary>Sync reference repo for <code>blueprints-v2-addon</code> (for admins)</summary>
 
-1. Run the following commands in the `blueprints-v2-addon-output` repo.
+1. Run the following commands in the [`blueprints-v2-addon-output`](https://github.com/ijlee2/blueprints-v2-addon-output) repo.
 
     ```sh
     # Reset project

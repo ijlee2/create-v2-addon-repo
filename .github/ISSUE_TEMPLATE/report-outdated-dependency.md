@@ -20,7 +20,7 @@ When you ran `pnpm outdated -r`, what did you see?
 ┌───────────────┬─────────┬────────┬───────────────────────┐
 │ Package       │ Current │ Latest │ Dependents            │
 ├───────────────┼─────────┼────────┼───────────────────────┤
-│ rollup (dev)  │ 3.21.3  │ 3.22.0 │ embroider-toolbox       │
+│ rollup (dev)  │ 3.21.3  │ 3.22.0 │ create-v2-addon-repo  │
 └───────────────┴─────────┴────────┴───────────────────────┘
 ```
 

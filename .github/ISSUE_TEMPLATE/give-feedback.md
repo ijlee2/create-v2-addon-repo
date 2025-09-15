@@ -11,11 +11,11 @@ Hello! Thanks for taking time to give feedback.
 
 You can tell us:
 
-- How you used `embroider-toolbox`
+- How you used `create-v2-addon-repo`
 - What you liked about it
 - What you didn't like about it
 
-When sharing what you didn't like, please do give constructive feedback by suggesting a specific solution for how `embroider-toolbox` can be improved.
+When sharing what you didn't like, please do give constructive feedback by suggesting a specific solution for how `create-v2-addon-repo` can be improved.
 
 
 ## Share your story 💞

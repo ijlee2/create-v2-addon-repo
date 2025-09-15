@@ -1,6 +1,6 @@
-# Contributing to embroider-toolbox
+# Contributing to create-v2-addon-repo
 
-Open source projects like `embroider-toolbox` live on your words of encouragement and contribution. Please give feedback, report issues, or submit pull requests!
+Open source projects like `create-v2-addon-repo` live on your words of encouragement and contribution. Please give feedback, report issues, or submit pull requests!
 
 Here are some guidelines to help you and everyone else.
 
@@ -14,13 +14,13 @@ Here are some guidelines to help you and everyone else.
 1. Fork and clone this repo.
 
     ```sh
-    git clone git@github.com:<your-github-handle>/embroider-toolbox.git
+    git clone git@github.com:<your-github-handle>/create-v2-addon-repo.git
     ```
 
 1. Change directory.
 
     ```sh
-    cd embroider-toolbox
+    cd create-v2-addon-repo
     ```
 
 1. Use [`pnpm`](https://pnpm.io/installation) to install dependencies.
@@ -108,7 +108,7 @@ Here are some guidelines to help you and everyone else.
     git push origin tag-0.1.2
     ```
 
-1. [Create a tag](https://github.com/ijlee2/embroider-toolbox/releases/new) and provide release notes. The tag name should match the workspace root's version (e.g. `0.1.2`).
+1. [Create a tag](https://github.com/ijlee2/create-v2-addon-repo/releases/new) and provide release notes. The tag name should match the workspace root's version (e.g. `0.1.2`).
 
 1. Publish the packages.
 
@@ -123,14 +123,14 @@ Here are some guidelines to help you and everyone else.
 
 <summary>Sync reference repo for <code>blueprints-v2-addon</code> (for admins)</summary>
 
-1. Run the following commands in the `blueprints-v2-addon-output` repo.
+1. Run the following commands in the [`blueprints-v2-addon-output`](https://github.com/ijlee2/blueprints-v2-addon-output) repo.
 
     ```sh
     # Reset project
     git rm -r .
 
     # Downstream files
-    git clone --no-checkout git@github.com:ijlee2/embroider-toolbox.git temp
+    git clone --no-checkout git@github.com:ijlee2/create-v2-addon-repo.git temp
     cd temp
     git sparse-checkout set packages/blueprints-v2-addon
     git checkout

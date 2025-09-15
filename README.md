@@ -10,32 +10,7 @@
 
 ## Package overview
 
-- [analyze-ember-project-dependencies](/packages/analyze-ember-project-dependencies/README.md)
 - [create-v2-addon-repo](/packages/create-v2-addon-repo/README.md)
-
-
-### Related packages
-
-- [ember-codemod-args-to-signature](https://github.com/ijlee2/ember-codemod-args-to-signature)
-- [ember-codemod-v1-to-v2](https://github.com/ijlee2/ember-codemod-v1-to-v2)
-
-
-## Tutorials
-
-> [!NOTE]
->
-> Please star or watch this repo to help me gauge interest.
-
-### analyze-ember-project-dependencies
-
-- Main tutorial
-
-
-### create-v2-addon-repo
-
-- Create v2 addons (main tutorial)
-- Customize blueprints
-- Customize repo
 
 
 ## Contributing

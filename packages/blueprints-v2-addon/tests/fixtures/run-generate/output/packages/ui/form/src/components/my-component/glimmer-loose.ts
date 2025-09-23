@@ -10,6 +10,6 @@ interface MyComponentGlimmerLooseSignature {
   Element: null;
 }
 
-export default class MyComponentGlimmerLooseComponent extends Component<MyComponentGlimmerLooseSignature> {
+export default class MyComponentGlimmerLoose extends Component<MyComponentGlimmerLooseSignature> {
   styles = styles;
 }

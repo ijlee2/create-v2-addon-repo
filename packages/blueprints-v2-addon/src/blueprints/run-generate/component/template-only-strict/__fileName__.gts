@@ -10,11 +10,10 @@ interface <%= options.entity.pascalizedName %>Signature {
   Element: null;
 }
 
-const <%= options.entity.pascalizedName %>Component: TOC<<%= options.entity.pascalizedName %>Signature> =
-  <template>
-    <div class={{styles.container}}>
-      {{yield}}
-    </div>
-  </template>;
+const <%= options.entity.pascalizedName %> = <template>
+  <div class={{styles.container}}>
+    {{yield}}
+  </div>
+</template> satisfies TOC<<%= options.entity.pascalizedName %>Signature>;
 
-export default <%= options.entity.pascalizedName %>Component;
+export default <%= options.entity.pascalizedName %>;

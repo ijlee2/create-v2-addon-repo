@@ -8,7 +8,7 @@ interface MyComponentTemplateOnlyLooseSignature {
   Element: null;
 }
 
-const MyComponentTemplateOnlyLooseComponent =
+const MyComponentTemplateOnlyLoose =
   templateOnlyComponent<MyComponentTemplateOnlyLooseSignature>();
 
-export default MyComponentTemplateOnlyLooseComponent;
+export default MyComponentTemplateOnlyLoose;

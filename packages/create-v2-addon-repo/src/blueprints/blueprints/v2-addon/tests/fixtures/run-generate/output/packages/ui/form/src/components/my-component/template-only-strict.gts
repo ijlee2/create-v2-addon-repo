@@ -10,11 +10,10 @@ interface MyComponentTemplateOnlyStrictSignature {
   Element: null;
 }
 
-const MyComponentTemplateOnlyStrictComponent: TOC<MyComponentTemplateOnlyStrictSignature> =
-  <template>
-    <div class={{styles.container}}>
-      {{yield}}
-    </div>
-  </template>;
+const MyComponentTemplateOnlyStrict = <template>
+  <div class={{styles.container}}>
+    {{yield}}
+  </div>
+</template> satisfies TOC<MyComponentTemplateOnlyStrictSignature>;
 
-export default MyComponentTemplateOnlyStrictComponent;
+export default MyComponentTemplateOnlyStrict;

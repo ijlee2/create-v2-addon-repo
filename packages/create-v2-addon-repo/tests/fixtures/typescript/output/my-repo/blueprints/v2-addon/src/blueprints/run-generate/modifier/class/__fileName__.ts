@@ -1,18 +1,16 @@
+import type { NamedArgs, PositionalArgs } from 'ember-modifier';
 import Modifier from 'ember-modifier';
-
-type Named = {};
-type Positional = [];
 
 interface <%= options.entity.pascalizedName %>Signature {
   Args: {
-    Named: Named;
-    Positional: Positional;
+    Named: {};
+    Positional: [];
   };
   Element: Element;
 }
 
-export default class <%= options.entity.pascalizedName %>Modifier extends Modifier<<%= options.entity.pascalizedName %>Signature> {
-  modify(element: Element /*, positional: Positional, named: Named */) {
+export default class <%= options.entity.pascalizedName %> extends Modifier<<%= options.entity.pascalizedName %>Signature> {
+  modify(element: Element /*, positional: PositionalArgs<<%= options.entity.pascalizedName %>Signature>, named: NamedArgs<<%= options.entity.pascalizedName %>Signature> */) {
     console.log(element);
   }
 }

@@ -1,19 +1,15 @@
 import Helper from '@ember/component/helper';
 
-type Named = {};
-type Positional = [string];
-type Return = string;
-
 interface <%= options.entity.pascalizedName %>Signature {
   Args: {
-    Named: Named;
-    Positional: Positional;
+    Named: {};
+    Positional: [string];
   };
-  Return: Return;
+  Return: string;
 }
 
-export default class <%= options.entity.pascalizedName %>Helper extends Helper<<%= options.entity.pascalizedName %>Signature> {
-  compute(positional: Positional /*, named: Named*/): Return {
+export default class <%= options.entity.pascalizedName %> extends Helper<<%= options.entity.pascalizedName %>Signature> {
+  compute(positional: <%= options.entity.pascalizedName %>Signature['Args']['Positional'] /*, named: <%= options.entity.pascalizedName %>Signature['Args']['Named']*/): <%= options.entity.pascalizedName %>Signature['Return'] {
     return positional[0];
   }
 }

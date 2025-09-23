@@ -1,9 +1,9 @@
 import Service from '@ember/service';
 
-export default class MyServiceClassService extends Service {}
+export default class MyServiceClass extends Service {}
 
 declare module '@ember/service' {
   interface Registry {
-    'my-service/class': MyServiceClassService;
+    'my-service/class': MyServiceClass;
   }
 }

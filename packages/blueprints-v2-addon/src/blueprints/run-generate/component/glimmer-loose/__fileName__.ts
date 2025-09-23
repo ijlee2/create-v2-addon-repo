@@ -10,6 +10,6 @@ interface <%= options.entity.pascalizedName %>Signature {
   Element: null;
 }
 
-export default class <%= options.entity.pascalizedName %>Component extends Component<<%= options.entity.pascalizedName %>Signature> {
+export default class <%= options.entity.pascalizedName %> extends Component<<%= options.entity.pascalizedName %>Signature> {
   styles = styles;
 }

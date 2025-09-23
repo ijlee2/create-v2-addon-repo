@@ -7,9 +7,11 @@ module('Integration | Helper | <%= options.entity.name %>', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
-    await render(hbs`
-      {{<%= options.entity.name %> "1234"}}
-    `);
+    await render(
+      hbs`
+        {{<%= options.entity.name %> "1234"}}
+      `,
+    );
 
     assert.dom().hasText('1234');
   });

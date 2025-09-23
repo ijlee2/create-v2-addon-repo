@@ -1,15 +1,11 @@
 import { helper } from '@ember/component/helper';
 
-type Named = {};
-type Positional = [string];
-type Return = string;
-
 interface MyHelperFunctionSignature {
   Args: {
-    Named: Named;
-    Positional: Positional;
+    Named: {};
+    Positional: [string];
   };
-  Return: Return;
+  Return: string;
 }
 
 export default helper<MyHelperFunctionSignature>(

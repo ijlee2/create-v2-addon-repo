@@ -8,7 +8,7 @@ interface <%= options.entity.pascalizedName %>Signature {
   Element: null;
 }
 
-const <%= options.entity.pascalizedName %>Component =
+const <%= options.entity.pascalizedName %> =
   templateOnlyComponent<<%= options.entity.pascalizedName %>Signature>();
 
-export default <%= options.entity.pascalizedName %>Component;
+export default <%= options.entity.pascalizedName %>;

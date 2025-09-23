@@ -11,7 +11,7 @@ interface MyComponentGlimmerStrictSignature {
 }
 
 // eslint-disable-next-line ember/no-empty-glimmer-component-classes
-export default class MyComponentGlimmerStrictComponent extends Component<MyComponentGlimmerStrictSignature> {
+export default class MyComponentGlimmerStrict extends Component<MyComponentGlimmerStrictSignature> {
   <template>
     <div class={{styles.container}}>
       {{yield}}

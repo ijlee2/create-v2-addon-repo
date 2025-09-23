@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 1.4.1
+
+### Patch Changes
+
+- [#108](https://github.com/ijlee2/create-v2-addon-repo/pull/108) Reintroduced ember-template-imports ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.4.0
 
 ### Minor Changes

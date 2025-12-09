@@ -1,5 +1,16 @@
 # create-v2-addon-repo
 
+## 1.5.0
+
+### Minor Changes
+
+- [#110](https://github.com/ijlee2/create-v2-addon-repo/pull/110) Supported Windows ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#111](https://github.com/ijlee2/create-v2-addon-repo/pull/111) Updated dependencies in blueprints ([@ijlee2](https://github.com/ijlee2))
+- [#109](https://github.com/ijlee2/create-v2-addon-repo/pull/109) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.4.1
 
 ### Patch Changes

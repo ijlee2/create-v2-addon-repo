@@ -1,11 +1,11 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { EOL } from 'node:os';
 import { join } from 'node:path';
 
 import type { Options } from '../../../types/run-generate.js';
 
 function addExportStatement(file: string, options: Options): string {
   const { entity } = options;
-  let line = '';
 
   switch (entity.type) {
     case 'component': {
@@ -13,23 +13,30 @@ function addExportStatement(file: string, options: Options): string {
         entity.blueprint === 'glimmer-strict' ||
         entity.blueprint === 'template-only-strict'
       ) {
-        line = `export { default as ${entity.pascalizedName} } from './${entity.type}s/${entity.name}.gts';\n`;
-      } else {
-        line = `export { default as ${entity.pascalizedName} } from './${entity.type}s/${entity.name}.ts';\n`;
+        return [
+          `export { default as ${entity.pascalizedName} } from './${entity.type}s/${entity.name}.gts';`,
+          file,
+        ].join(EOL);
       }
 
-      break;
+      return [
+        `export { default as ${entity.pascalizedName} } from './${entity.type}s/${entity.name}.ts';`,
+        file,
+      ].join(EOL);
     }
 
     case 'helper':
     case 'modifier': {
-      line = `export { default as ${entity.camelizedName} } from './${entity.type}s/${entity.name}.ts';\n`;
+      return [
+        `export { default as ${entity.camelizedName} } from './${entity.type}s/${entity.name}.ts';`,
+        file,
+      ].join(EOL);
+    }
 
-      break;
+    default: {
+      return file;
     }
   }
-
-  return [line, file].join('');
 }
 
 export function updateBarrelFile(options: Options): void {

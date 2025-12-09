@@ -1,4 +1,5 @@
 import { existsSync, writeFileSync } from 'node:fs';
+import { EOL } from 'node:os';
 import { join } from 'node:path';
 
 import {
@@ -35,7 +36,7 @@ export function updatePackageJson(appRoot: string, options: Options): void {
   updateDevDependencies(packageJson, options);
 
   const destination = join(appRoot, 'package.json');
-  const file = JSON.stringify(packageJson, null, 2) + '\n';
+  const file = JSON.stringify(packageJson, null, 2).replaceAll('\n', EOL) + EOL;
 
   writeFileSync(destination, file, 'utf8');
 }

@@ -12,7 +12,7 @@ export function runNew(codemodOptions: CodemodOptions): void {
 
   if (canSkip(options)) {
     console.log(
-      `🚫 Skipped creating ${options.addon.name}, because it already exists.\n`,
+      `🚫 Skipped creating ${options.addon.name}, because it already exists.`,
     );
 
     return;
@@ -22,5 +22,5 @@ export function runNew(codemodOptions: CodemodOptions): void {
   updateDocsApp(options);
   updateTestApp(options);
 
-  console.log(`✅ Created ${options.addon.name}.\n`);
+  console.log(`✅ Created ${options.addon.name}.`);
 }

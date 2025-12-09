@@ -10,23 +10,19 @@ import { blueprintsRoot } from '../../../utils/blueprints.js';
 function getFilesToSkip(options: Options): string[] {
   const { entity, testApp } = options;
 
-  const files = new Set<string>();
-
   switch (entity.type) {
     case 'component':
     case 'helper':
     case 'modifier': {
-      if (testApp.useTemplateTag) {
-        files.add('__fileName__.ts');
-      } else {
-        files.add('__fileName__.gts');
-      }
+      return testApp.useTemplateTag
+        ? ['__fileName__.ts']
+        : ['__fileName__.gts'];
+    }
 
-      break;
+    default: {
+      return [];
     }
   }
-
-  return Array.from(files);
 }
 
 function resolveBlueprintFilePath(

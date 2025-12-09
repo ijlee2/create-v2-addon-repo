@@ -1,4 +1,4 @@
-import { join, relative } from 'node:path';
+import { join, relative, sep } from 'node:path';
 
 import type { CodemodOptions, Options } from '../../types/run-new.js';
 
@@ -23,8 +23,15 @@ export function createOptions(codemodOptions: CodemodOptions): Options {
   const dasherizedName = dasherize(name);
   const pascalizedName = pascalize(name);
 
-  const addonLocation = join('packages', location ?? dasherize(name));
-  const addonLocationInverse = relative(addonLocation, '.');
+  const addonLocation = join(
+    'packages',
+    location ?? dasherize(name),
+  ).replaceAll(sep, '/');
+
+  const addonLocationInverse = relative(addonLocation, '.').replaceAll(
+    sep,
+    '/',
+  );
 
   return {
     addon: {

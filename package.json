@@ -22,12 +22,12 @@
     "test": "pnpm --filter \"*\" test"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.29.7",
-    "@changesets/get-github-info": "^0.6.0",
-    "sort-package-json": "^3.4.0",
-    "update-workspace-root-version": "^2.0.4"
+    "@changesets/cli": "^2.29.8",
+    "@ijlee2-frontend-configs/changesets": "^1.0.0",
+    "sort-package-json": "^3.5.1",
+    "update-workspace-root-version": "^2.1.2"
   },
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.25.0",
   "engines": {
     "node": "20.* || >= 22",
     "pnpm": ">= 10"

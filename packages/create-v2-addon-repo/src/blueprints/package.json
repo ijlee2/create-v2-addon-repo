@@ -19,9 +19,9 @@
   "devDependencies": {
     "blueprints-v2-addon": "workspace:*",
     "concurrently": "^9.2.1",
-    "sort-package-json": "^3.4.0"
+    "sort-package-json": "^3.5.1"
   },
-  "packageManager": "pnpm@10.17.1",
+  "packageManager": "pnpm@10.25.0",
   "engines": {
     "node": "20.* || >= 22",
     "pnpm": ">= 10"

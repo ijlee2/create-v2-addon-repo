@@ -1,5 +1,3 @@
-import { join } from 'node:path';
-
 import { findFiles, removeFiles } from '@codemod-utils/files';
 
 import type { Options } from '../../../types/run-destroy.js';
@@ -11,16 +9,12 @@ function getPattern(options: Options): string {
     case 'component':
     case 'helper':
     case 'modifier': {
-      return join(
-        'tests/integration',
-        `${entity.type}s`,
-        `${entity.name}-test.*`,
-      );
+      return `tests/integration/${entity.type}s/${entity.name}-test.*`;
     }
 
     case 'service':
     case 'util': {
-      return join('tests/unit', `${entity.type}s`, `${entity.name}-test.*`);
+      return `tests/unit/${entity.type}s/${entity.name}-test.*`;
     }
   }
 }

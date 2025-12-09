@@ -1,5 +1,5 @@
 import { readFileSync, writeFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { join, sep } from 'node:path';
 
 import { AST } from '@codemod-utils/ast-javascript';
 
@@ -33,7 +33,7 @@ function updateSideWatch(file: string, options: Options): string {
         ...watching.value.elements.map((element: { value: string }) => {
           return element.value;
         }),
-        join('..', addon.location, 'src'),
+        join('..', addon.location, 'src').replaceAll(sep, '/'),
       ].sort();
 
       watching.value.elements = paths.map((path) => {

@@ -1,4 +1,5 @@
 import { readFileSync, writeFileSync } from 'node:fs';
+import { EOL } from 'node:os';
 import { join } from 'node:path';
 
 import { AST } from '@codemod-utils/ast-javascript';
@@ -7,9 +8,11 @@ import type { Options } from '../../../types/run-new.js';
 
 function addImportStatement(file: string, options: Options): string {
   const { addon } = options;
-  const line = `import type ${addon.pascalizedName}Registry from '${addon.name}/template-registry';\n`;
 
-  return [line, file].join('');
+  return [
+    `import type ${addon.pascalizedName}Registry from '${addon.name}/template-registry';`,
+    file,
+  ].join(EOL);
 }
 
 function updateRegistry(file: string, options: Options): string {

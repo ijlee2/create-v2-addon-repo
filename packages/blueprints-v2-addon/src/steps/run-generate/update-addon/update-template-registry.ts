@@ -1,4 +1,5 @@
 import { existsSync, readFileSync, writeFileSync } from 'node:fs';
+import { EOL } from 'node:os';
 import { join } from 'node:path';
 
 import { AST } from '@codemod-utils/ast-javascript';
@@ -9,31 +10,36 @@ function addImportStatement(file: string, options: Options): string {
   const { entity } = options;
   const localName = getLocalName(options);
 
-  let line = '';
-
   switch (entity.type) {
     case 'component': {
       if (
         entity.blueprint === 'glimmer-strict' ||
         entity.blueprint === 'template-only-strict'
       ) {
-        line = `import type ${localName} from './${entity.type}s/${entity.name}.gts';\n`;
-      } else {
-        line = `import type ${localName} from './${entity.type}s/${entity.name}.ts';\n`;
+        return [
+          `import type ${localName} from './${entity.type}s/${entity.name}.gts';`,
+          file,
+        ].join(EOL);
       }
 
-      break;
+      return [
+        `import type ${localName} from './${entity.type}s/${entity.name}.ts';`,
+        file,
+      ].join(EOL);
     }
 
     case 'helper':
     case 'modifier': {
-      line = `import type ${localName} from './${entity.type}s/${entity.name}.ts';\n`;
+      return [
+        `import type ${localName} from './${entity.type}s/${entity.name}.ts';`,
+        file,
+      ].join(EOL);
+    }
 
-      break;
+    default: {
+      return file;
     }
   }
-
-  return [line, file].join('');
 }
 
 function getLocalName(options: Options): string {

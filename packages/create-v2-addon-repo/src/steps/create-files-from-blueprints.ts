@@ -24,7 +24,7 @@ function setExecutePermissions(options: Options) {
     'blueprints/v2-addon/update-test-fixtures.sh',
   ]);
 
-  Array.from(files).forEach((file) => {
+  files.forEach((file) => {
     const filePath = join(projectRoot, project.name, file);
 
     chmodSync(filePath, 0o755);

@@ -11,7 +11,7 @@ export function runDestroy(codemodOptions: CodemodOptions): void {
 
   if (canSkip(options)) {
     console.log(
-      `🚫 Skipped removing ${options.entity.name}, because it was already removed.\n`,
+      `🚫 Skipped removing ${options.entity.name}, because it was already removed.`,
     );
 
     return;
@@ -20,5 +20,5 @@ export function runDestroy(codemodOptions: CodemodOptions): void {
   updateAddon(options);
   updateTestApp(options);
 
-  console.log(`✅ Removed ${options.entity.name} and its test file.\n`);
+  console.log(`✅ Removed ${options.entity.name} and its test file.`);
 }

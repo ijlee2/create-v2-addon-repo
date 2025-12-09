@@ -11,7 +11,7 @@ export function runGenerate(codemodOptions: CodemodOptions): void {
 
   if (canSkip(options)) {
     console.log(
-      `🚫 Skipped creating ${options.entity.name}, because it already exists.\n`,
+      `🚫 Skipped creating ${options.entity.name}, because it already exists.`,
     );
 
     return;
@@ -20,5 +20,5 @@ export function runGenerate(codemodOptions: CodemodOptions): void {
   updateAddon(options);
   updateTestApp(options);
 
-  console.log(`✅ Created ${options.entity.name} and its test file.\n`);
+  console.log(`✅ Created ${options.entity.name} and its test file.`);
 }

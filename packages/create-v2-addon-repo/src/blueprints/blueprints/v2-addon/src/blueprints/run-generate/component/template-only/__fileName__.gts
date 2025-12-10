@@ -4,12 +4,16 @@ import styles from './\\<%= data.localFileName %\\>.module.css';
 
 interface \\<%= options.entity.pascalizedName %\\>Signature {
   Args: {};
+  Blocks: {
+    default: [];
+  };
+  Element: null;
 }
 
-const \\<%= options.entity.pascalizedName %\\> = <template>
+const \\<%= options.entity.pascalizedName %\\>: TOC<\\<%= options.entity.pascalizedName %\\>Signature> = <template>
   <div class={{styles.container}}>
     {{yield}}
   </div>
-</template> satisfies TOC<\\<%= options.entity.pascalizedName %\\>Signature>;
+</template>;
 
 export default \\<%= options.entity.pascalizedName %\\>;

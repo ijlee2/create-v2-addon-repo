@@ -4,6 +4,10 @@ import styles from './glimmer.module.css';
 
 interface MyComponentGlimmerSignature {
   Args: {};
+  Blocks: {
+    default: [];
+  };
+  Element: null;
 }
 
 export default class MyComponentGlimmer extends Component<MyComponentGlimmerSignature> {

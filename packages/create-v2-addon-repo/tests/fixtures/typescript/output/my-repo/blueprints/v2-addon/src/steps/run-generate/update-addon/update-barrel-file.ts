@@ -9,18 +9,8 @@ function addExportStatement(file: string, options: Options): string {
 
   switch (entity.type) {
     case 'component': {
-      if (
-        entity.blueprint === 'glimmer-strict' ||
-        entity.blueprint === 'template-only-strict'
-      ) {
-        return [
-          `export { default as ${entity.pascalizedName} } from './${entity.type}s/${entity.name}.gts';`,
-          file,
-        ].join(EOL);
-      }
-
       return [
-        `export { default as ${entity.pascalizedName} } from './${entity.type}s/${entity.name}.ts';`,
+        `export { default as ${entity.pascalizedName} } from './${entity.type}s/${entity.name}.gts';`,
         file,
       ].join(EOL);
     }

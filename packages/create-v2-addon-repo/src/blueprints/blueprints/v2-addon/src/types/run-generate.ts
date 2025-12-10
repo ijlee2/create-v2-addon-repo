@@ -1,10 +1,6 @@
 type EntityType =
   | {
-      blueprint:
-        | 'glimmer-loose'
-        | 'glimmer-strict'
-        | 'template-only-loose'
-        | 'template-only-strict';
+      blueprint: 'glimmer' | 'template-only';
       type: 'component';
     }
   | {
@@ -46,7 +42,6 @@ type Options = {
   testApp: {
     location: string;
     name: string;
-    useTemplateTag: boolean;
   };
 };
 

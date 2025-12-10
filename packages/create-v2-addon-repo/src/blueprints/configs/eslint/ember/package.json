@@ -6,7 +6,8 @@
   "type": "module",
   "exports": {
     "./v1-app": "./v1-app/index.mjs",
-    "./v2-addon": "./v2-addon/index.mjs"
+    "./v2-addon": "./v2-addon/index.mjs",
+    "./v2-app": "./v2-app/index.mjs"
   },
   "scripts": {
     "format": "prettier . --cache --write",
@@ -17,7 +18,7 @@
     "lint:js:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@ijlee2-frontend-configs/eslint-config-ember": "^2.4.1"
+    "@ijlee2-frontend-configs/eslint-config-ember": "^2.4.2"
   },
   "devDependencies": {
     "@shared-configs/eslint-config-node": "workspace:*",

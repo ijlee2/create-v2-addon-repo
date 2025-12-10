@@ -1,27 +1,18 @@
 'use strict';
 
-const sideWatch = require('@embroider/broccoli-side-watch');
-const { Webpack } = require('@embroider/webpack');
+const { compatBuild } = require('@embroider/compat');
 const EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 function isProduction() {
   return EmberApp.env() === 'production';
 }
 
-module.exports = function (defaults) {
-  const app = new EmberApp(defaults, {
-    autoImport: {
-      watchDependencies: [],
-    },
+module.exports = async function (defaults) {
+  const { buildOnce } = await import('@embroider/vite');
 
+  const app = new EmberApp(defaults, {
     'ember-cli-babel': {
       enableTypeScriptTransform: true,
-    },
-
-    trees: {
-      app: sideWatch('app', {
-        watching: [],
-      }),
     },
 
     // Add options here
@@ -75,17 +66,8 @@ module.exports = function (defaults) {
         },
       },
     },
-    skipBabel: [
-      {
-        package: 'qunit',
-      },
-    ],
     splitAtRoutes: [],
-    staticAddonTestSupportTrees: true,
-    staticAddonTrees: true,
-    staticEmberSource: true,
-    staticInvokables: true,
   };
 
-  return require('@embroider/compat').compatBuild(app, Webpack, options);
+  return require('@embroider/compat').compatBuild(app, buildOnce, options);
 };

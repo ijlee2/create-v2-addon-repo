@@ -9,7 +9,7 @@ interface MyModifierClassSignature {
   Element: Element;
 }
 
-export default class MyModifierClass extends Modifier<MyModifierClassSignature> {
+export default class MyModifierClassModifier extends Modifier<MyModifierClassSignature> {
   modify(element: Element /*, positional: PositionalArgs<MyModifierClassSignature>, named: NamedArgs<MyModifierClassSignature> */) {
     console.log(element);
   }

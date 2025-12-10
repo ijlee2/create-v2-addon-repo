@@ -8,7 +8,7 @@ interface MyHelperClassSignature {
   Return: string;
 }
 
-export default class MyHelperClass extends Helper<MyHelperClassSignature> {
+export default class MyHelperClassHelper extends Helper<MyHelperClassSignature> {
   compute(positional: MyHelperClassSignature['Args']['Positional'] /*, named: MyHelperClassSignature['Args']['Named']*/): MyHelperClassSignature['Return'] {
     return positional[0];
   }

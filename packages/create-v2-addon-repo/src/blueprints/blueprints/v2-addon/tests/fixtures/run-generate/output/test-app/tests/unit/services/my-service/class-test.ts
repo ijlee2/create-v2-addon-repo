@@ -1,10 +1,10 @@
+import type { Registry as Services } from '@ember/service';
 import type { TestContext as BaseTestContext } from '@ember/test-helpers';
 import { module, test } from 'qunit';
-import { MyServiceClass } from '@my-org-ui/form';
 import { setupTest } from 'test-app/tests/helpers';
 
 interface TestContext extends BaseTestContext {
-  service: MyServiceClass;
+  service: Services['my-service/class'];
 }
 
 module('Unit | Service | my-service/class', function (hooks) {

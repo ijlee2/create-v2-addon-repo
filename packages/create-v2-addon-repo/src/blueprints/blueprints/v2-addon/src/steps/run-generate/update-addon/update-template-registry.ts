@@ -12,18 +12,8 @@ function addImportStatement(file: string, options: Options): string {
 
   switch (entity.type) {
     case 'component': {
-      if (
-        entity.blueprint === 'glimmer-strict' ||
-        entity.blueprint === 'template-only-strict'
-      ) {
-        return [
-          `import type ${localName} from './${entity.type}s/${entity.name}.gts';`,
-          file,
-        ].join(EOL);
-      }
-
       return [
-        `import type ${localName} from './${entity.type}s/${entity.name}.ts';`,
+        `import type ${localName} from './${entity.type}s/${entity.name}.gts';`,
         file,
       ].join(EOL);
     }

@@ -8,15 +8,13 @@ import type { Options } from '../../../types/run-generate.js';
 import { blueprintsRoot } from '../../../utils/blueprints.js';
 
 function getFilesToSkip(options: Options): string[] {
-  const { entity, testApp } = options;
+  const { entity } = options;
 
   switch (entity.type) {
     case 'component':
     case 'helper':
     case 'modifier': {
-      return testApp.useTemplateTag
-        ? ['__fileName__.ts']
-        : ['__fileName__.gts'];
+      return ['__fileName__.gts'];
     }
 
     default: {

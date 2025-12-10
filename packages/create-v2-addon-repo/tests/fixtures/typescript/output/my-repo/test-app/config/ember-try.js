@@ -1,6 +1,6 @@
 'use strict';
 
-const { embroiderOptimized, embroiderSafe } = require('@embroider/test-setup');
+const { embroiderOptimized } = require('@embroider/test-setup');
 
 module.exports = async function () {
   const { default: latestVersion } = await import('latest-version');
@@ -52,7 +52,6 @@ module.exports = async function () {
           },
         },
       },
-      embroiderSafe(),
       embroiderOptimized(),
     ],
   };

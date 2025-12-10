@@ -106,7 +106,7 @@ There may be more than 1 blueprint available. You can pass `--blueprint` to sele
 
 ```sh
 # Example: Create a <template> tag component
-pnpm addon g component ui/form/select --blueprint glimmer-strict
+pnpm addon g component ui/form/select --blueprint glimmer
 ```
 
 For more information, pass `--help`.

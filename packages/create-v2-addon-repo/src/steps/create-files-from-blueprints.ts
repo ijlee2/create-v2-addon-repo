@@ -12,6 +12,7 @@ function resolveBlueprintFilePath(blueprintFilePath: string): string {
     .replace('__gitignore__', '.gitignore')
     .replace('__npmignore__', '.npmignore')
     .replace('__npmrc__', '.npmrc')
+    .replace('__nvmrc__', '.nvmrc')
     .replace('__.gitignore__', '__gitignore__');
 }
 

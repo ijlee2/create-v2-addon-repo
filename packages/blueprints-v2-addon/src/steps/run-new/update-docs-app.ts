@@ -2,10 +2,7 @@ import { existsSync } from 'node:fs';
 import { join } from 'node:path';
 
 import type { Options } from '../../types/run-new.js';
-import {
-  updateEmberCliBuild,
-  updatePackageJson,
-} from './update-docs-and-test-apps/index.js';
+import { updatePackageJson } from './update-docs-and-test-apps/index.js';
 
 export function updateDocsApp(options: Options): void {
   const { docsApp, projectRoot } = options;
@@ -16,6 +13,5 @@ export function updateDocsApp(options: Options): void {
     return;
   }
 
-  updateEmberCliBuild(appRoot, options);
   updatePackageJson(appRoot, options);
 }

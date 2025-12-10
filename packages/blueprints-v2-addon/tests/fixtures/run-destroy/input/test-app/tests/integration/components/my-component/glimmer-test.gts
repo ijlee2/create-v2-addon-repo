@@ -1,15 +1,15 @@
-import { MyComponentGlimmerStrict } from '@my-org-ui/form';
+import { MyComponentGlimmer } from '@my-org-ui/form';
 import { render } from '@ember/test-helpers';
 import { a11yAudit } from 'ember-a11y-testing/test-support';
 import { module, test } from 'qunit';
 import { setupRenderingTest } from 'test-app/tests/helpers';
 
-module('Integration | Component | my-component/glimmer-strict', function (hooks) {
+module('Integration | Component | my-component/glimmer', function (hooks) {
   setupRenderingTest(hooks);
 
   test('it renders', async function (assert) {
     await render(<template>
-      <MyComponentGlimmerStrict />
+      <MyComponentGlimmer />
     </template>);
 
     assert.dom().hasText('');

@@ -11,7 +11,7 @@ const fixtureRoot = 'tmp/run-destroy';
 function runCommands() {
   runDestroy({
     entity: {
-      name: 'my-component/glimmer-strict',
+      name: 'my-component/glimmer',
       type: 'component',
     },
     projectRoot: `${fixtureRoot}/packages/ui/form`,
@@ -20,7 +20,7 @@ function runCommands() {
 
   runDestroy({
     entity: {
-      name: 'my-component/template-only-strict',
+      name: 'my-component/template-only',
       type: 'component',
     },
     projectRoot: `${fixtureRoot}/packages/ui/form`,

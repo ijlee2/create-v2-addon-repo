@@ -11,7 +11,7 @@ process.title = 'blueprints-v2-addon';
 
 // Set codemod options
 const DEFAULT_BLUEPRINT_VALUE = {
-  component: 'glimmer-strict',
+  component: 'glimmer',
   helper: 'class',
   modifier: 'class',
   service: 'class',
@@ -95,7 +95,7 @@ yargs(hideBin(process.argv))
                 type: 'string',
               })
               .option('blueprint', {
-                choices: ['glimmer-strict', 'template-only-strict'] as const,
+                choices: ['glimmer', 'template-only'] as const,
                 describe: 'Which blueprint to run',
                 type: 'string',
               })

@@ -1,8 +1,8 @@
 import Component from '@glimmer/component';
 
-import styles from './glimmer-strict.css';
+import styles from './glimmer.css';
 
-interface MyComponentGlimmerStrictSignature {
+interface MyComponentGlimmerSignature {
   Args: {};
   Blocks: {
     default: [];
@@ -11,7 +11,7 @@ interface MyComponentGlimmerStrictSignature {
 }
 
 // eslint-disable-next-line ember/no-empty-glimmer-component-classes
-export default class MyComponentGlimmerStrict extends Component<MyComponentGlimmerStrictSignature> {
+export default class MyComponentGlimmer extends Component<MyComponentGlimmerSignature> {
   <template>
     <div class={{styles.container}}>
       {{yield}}

@@ -1,5 +1,16 @@
 # create-v2-addon-repo
 
+## 2.0.0
+
+### Major Changes
+
+- [#114](https://github.com/ijlee2/create-v2-addon-repo/pull/114) Supported Vite for docs-app ([@ijlee2](https://github.com/ijlee2))
+- [#113](https://github.com/ijlee2/create-v2-addon-repo/pull/113) Supported strict mode only ([@ijlee2](https://github.com/ijlee2))
+
+### Minor Changes
+
+- [#112](https://github.com/ijlee2/create-v2-addon-repo/pull/112) Replaced @glint/core with @glint/ember-tsc ([@ijlee2](https://github.com/ijlee2))
+
 ## 1.5.0
 
 ### Minor Changes

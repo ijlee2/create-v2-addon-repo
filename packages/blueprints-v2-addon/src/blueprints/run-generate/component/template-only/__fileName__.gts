@@ -1,13 +1,9 @@
 import type { TOC } from '@ember/component/template-only';
 
-import styles from './<%= data.localFileName %>.css';
+import styles from './<%= data.localFileName %>.module.css';
 
 interface <%= options.entity.pascalizedName %>Signature {
   Args: {};
-  Blocks: {
-    default: [];
-  };
-  Element: null;
 }
 
 const <%= options.entity.pascalizedName %> = <template>

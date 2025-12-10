@@ -9,7 +9,7 @@ interface <%= options.entity.pascalizedName %>Signature {
   Element: Element;
 }
 
-export default class <%= options.entity.pascalizedName %> extends Modifier<<%= options.entity.pascalizedName %>Signature> {
+export default class <%= options.entity.pascalizedName %>Modifier extends Modifier<<%= options.entity.pascalizedName %>Signature> {
   modify(element: Element /*, positional: PositionalArgs<<%= options.entity.pascalizedName %>Signature>, named: NamedArgs<<%= options.entity.pascalizedName %>Signature> */) {
     console.log(element);
   }

@@ -4,12 +4,16 @@ import styles from './template-only.module.css';
 
 interface MyComponentTemplateOnlySignature {
   Args: {};
+  Blocks: {
+    default: [];
+  };
+  Element: null;
 }
 
-const MyComponentTemplateOnly = <template>
+const MyComponentTemplateOnly: TOC<MyComponentTemplateOnlySignature> = <template>
   <div class={{styles.container}}>
     {{yield}}
   </div>
-</template> satisfies TOC<MyComponentTemplateOnlySignature>;
+</template>;
 
 export default MyComponentTemplateOnly;

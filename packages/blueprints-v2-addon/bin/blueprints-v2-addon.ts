@@ -11,9 +11,9 @@ process.title = 'blueprints-v2-addon';
 
 // Set codemod options
 const DEFAULT_BLUEPRINT_VALUE = {
-  component: 'glimmer',
-  helper: 'class',
-  modifier: 'class',
+  component: 'template-only',
+  helper: 'function',
+  modifier: 'function',
   service: 'class',
   util: 'function',
 } as const;

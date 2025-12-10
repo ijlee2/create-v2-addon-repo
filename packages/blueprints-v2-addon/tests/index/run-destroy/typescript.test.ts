@@ -11,25 +11,7 @@ const fixtureRoot = 'tmp/run-destroy';
 function runCommands() {
   runDestroy({
     entity: {
-      name: 'my-component/glimmer-loose',
-      type: 'component',
-    },
-    projectRoot: `${fixtureRoot}/packages/ui/form`,
-    testAppLocation: '../../../test-app',
-  });
-
-  runDestroy({
-    entity: {
       name: 'my-component/glimmer-strict',
-      type: 'component',
-    },
-    projectRoot: `${fixtureRoot}/packages/ui/form`,
-    testAppLocation: '../../../test-app',
-  });
-
-  runDestroy({
-    entity: {
-      name: 'my-component/template-only-loose',
       type: 'component',
     },
     projectRoot: `${fixtureRoot}/packages/ui/form`,

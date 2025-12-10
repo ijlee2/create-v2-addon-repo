@@ -20,17 +20,7 @@ rm -r "tests/fixtures/run-destroy/output"
 cp -r "tests/fixtures/run-destroy/input" "tests/fixtures/run-destroy/output"
 
 ./dist/bin/blueprints-v2-addon.js \
-  destroy component my-component/glimmer-loose \
-  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
-  --test-app-location "../../../test-app"
-
-./dist/bin/blueprints-v2-addon.js \
   destroy component my-component/glimmer-strict \
-  --root "tests/fixtures/run-destroy/output/packages/ui/form" \
-  --test-app-location "../../../test-app"
-
-./dist/bin/blueprints-v2-addon.js \
-  destroy component my-component/template-only-loose \
   --root "tests/fixtures/run-destroy/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 
@@ -74,20 +64,8 @@ rm -r "tests/fixtures/run-generate/output"
 cp -r "tests/fixtures/run-generate/input" "tests/fixtures/run-generate/output"
 
 ./dist/bin/blueprints-v2-addon.js \
-  generate component my-component/glimmer-loose \
-  --blueprint "glimmer-loose" \
-  --root "tests/fixtures/run-generate/output/packages/ui/form" \
-  --test-app-location "../../../test-app"
-
-./dist/bin/blueprints-v2-addon.js \
   generate component my-component/glimmer-strict \
   --blueprint "glimmer-strict" \
-  --root "tests/fixtures/run-generate/output/packages/ui/form" \
-  --test-app-location "../../../test-app"
-
-./dist/bin/blueprints-v2-addon.js \
-  generate component my-component/template-only-loose \
-  --blueprint "template-only-loose" \
   --root "tests/fixtures/run-generate/output/packages/ui/form" \
   --test-app-location "../../../test-app"
 

@@ -11,28 +11,8 @@ const fixtureRoot = 'tmp/run-generate';
 function runCommands() {
   runGenerate({
     entity: {
-      blueprint: 'glimmer-loose',
-      name: 'my-component/glimmer-loose',
-      type: 'component',
-    },
-    projectRoot: `${fixtureRoot}/packages/ui/form`,
-    testAppLocation: '../../../test-app',
-  });
-
-  runGenerate({
-    entity: {
       blueprint: 'glimmer-strict',
       name: 'my-component/glimmer-strict',
-      type: 'component',
-    },
-    projectRoot: `${fixtureRoot}/packages/ui/form`,
-    testAppLocation: '../../../test-app',
-  });
-
-  runGenerate({
-    entity: {
-      blueprint: 'template-only-loose',
-      name: 'my-component/template-only-loose',
       type: 'component',
     },
     projectRoot: `${fixtureRoot}/packages/ui/form`,

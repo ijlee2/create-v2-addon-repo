@@ -95,12 +95,7 @@ yargs(hideBin(process.argv))
                 type: 'string',
               })
               .option('blueprint', {
-                choices: [
-                  'glimmer-loose',
-                  'glimmer-strict',
-                  'template-only-loose',
-                  'template-only-strict',
-                ] as const,
+                choices: ['glimmer-strict', 'template-only-strict'] as const,
                 describe: 'Which blueprint to run',
                 type: 'string',
               })

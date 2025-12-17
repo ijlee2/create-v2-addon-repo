@@ -1,5 +1,12 @@
 # create-v2-addon-repo
 
+## 2.0.1
+
+### Patch Changes
+
+- [#115](https://github.com/ijlee2/create-v2-addon-repo/pull/115) Added repository.directory ([@ijlee2](https://github.com/ijlee2))
+- [#115](https://github.com/ijlee2/create-v2-addon-repo/pull/115) Updated README ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.0.0
 
 ### Major Changes

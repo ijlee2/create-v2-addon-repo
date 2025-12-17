@@ -6,7 +6,7 @@ import gitDiffApply from 'git-diff-apply';
 import yargs from 'yargs';
 import { hideBin } from 'yargs/helpers';
 
-const CURRENT_VERSION = '2.0.0';
+const CURRENT_VERSION = '2.0.1';
 
 async function updateBlueprints({ from, to }) {
   const startTag = from;

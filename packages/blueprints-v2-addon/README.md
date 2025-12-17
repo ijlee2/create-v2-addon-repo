@@ -144,4 +144,4 @@ pnpm update-blueprints --to 0.5.0
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE.md).
+This project is licensed under the [MIT License](./LICENSE.md).

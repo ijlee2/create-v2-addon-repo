@@ -1,5 +1,12 @@
 # create-v2-addon-repo
 
+## 2.1.0
+
+### Minor Changes
+
+- [#120](https://github.com/ijlee2/create-v2-addon-repo/pull/120) Updated dependencies in blueprints ([@ijlee2](https://github.com/ijlee2))
+- [#119](https://github.com/ijlee2/create-v2-addon-repo/pull/119) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.0.2
 
 ### Patch Changes

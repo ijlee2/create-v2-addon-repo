@@ -1,6 +1,6 @@
 {
   "name": "workspace-root",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "private": true,
   "description": "Workspace root for create-v2-addon-repo",
   "repository": {

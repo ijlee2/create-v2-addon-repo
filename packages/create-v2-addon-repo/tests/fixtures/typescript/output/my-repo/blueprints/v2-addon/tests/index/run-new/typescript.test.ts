@@ -5,7 +5,7 @@ import { inputProject, outputProject } from '../../fixtures/run-new/index.js';
 
 const fixtureRoot = 'tmp/run-new';
 
-function runCommands() {
+function runCommands(): void {
   runNew({
     location: 'ui/form',
     name: '@my-org-ui/form',

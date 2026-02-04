@@ -16,7 +16,7 @@ function resolveBlueprintFilePath(blueprintFilePath: string): string {
     .replace('__.gitignore__', '__gitignore__');
 }
 
-function setExecutePermissions(options: Options) {
+function setExecutePermissions(options: Options): void {
   const { project, projectRoot } = options;
 
   const files = new Set([

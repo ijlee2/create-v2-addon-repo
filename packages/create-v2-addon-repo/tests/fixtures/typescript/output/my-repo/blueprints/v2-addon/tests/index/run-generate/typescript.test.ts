@@ -8,7 +8,7 @@ import {
 
 const fixtureRoot = 'tmp/run-generate';
 
-function runCommands() {
+function runCommands(): void {
   runGenerate({
     entity: {
       blueprint: 'glimmer',

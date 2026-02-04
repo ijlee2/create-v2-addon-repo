@@ -17,9 +17,6 @@
   "type": "module",
   "main": "dist/src/index.js",
   "bin": "dist/bin/create-v2-addon-repo.js",
-  "directories": {
-    "test": "tests"
-  },
   "files": [
     "dist"
   ],

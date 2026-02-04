@@ -1,6 +1,6 @@
 {
   "name": "blueprints-v2-addon",
-  "version": "2.0.2",
+  "version": "2.1.0",
   "private": true,
   "description": "Blueprints for v2 addons",
   "keywords": [
@@ -17,9 +17,6 @@
   "type": "module",
   "main": "dist/src/index.js",
   "bin": "dist/bin/blueprints-v2-addon.js",
-  "directories": {
-    "test": "tests"
-  },
   "files": [
     "dist"
   ],

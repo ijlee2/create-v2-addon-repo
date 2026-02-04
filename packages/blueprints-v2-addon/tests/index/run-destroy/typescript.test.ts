@@ -8,7 +8,7 @@ import {
 
 const fixtureRoot = 'tmp/run-destroy';
 
-function runCommands() {
+function runCommands(): void {
   runDestroy({
     entity: {
       name: 'my-component/glimmer',

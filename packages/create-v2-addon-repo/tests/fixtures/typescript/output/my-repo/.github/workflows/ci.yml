@@ -16,13 +16,13 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           cache: 'pnpm'
           node-version: ${{ env.NODE_VERSION }}
@@ -34,7 +34,7 @@ jobs:
         run: pnpm build
 
       - name: Upload built packages
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v6
         with:
           name: built-packages
           include-hidden-files: true
@@ -50,13 +50,13 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           cache: 'pnpm'
           node-version: ${{ env.NODE_VERSION }}
@@ -65,7 +65,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Download built packages
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v7
         with:
           name: built-packages
           path: packages
@@ -86,13 +86,13 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           cache: 'pnpm'
           node-version: ${{ env.NODE_VERSION }}
@@ -101,7 +101,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Download built-packages
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v7
         with:
           name: built-packages
           path: packages
@@ -127,13 +127,13 @@ jobs:
     timeout-minutes: 5
     steps:
       - name: Check out a copy of the repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Set up pnpm
         uses: pnpm/action-setup@v4
 
       - name: Use Node.js ${{ env.NODE_VERSION }}
-        uses: actions/setup-node@v5
+        uses: actions/setup-node@v6
         with:
           cache: 'pnpm'
           node-version: ${{ env.NODE_VERSION }}
@@ -142,7 +142,7 @@ jobs:
         run: pnpm install --frozen-lockfile
 
       - name: Download built-packages
-        uses: actions/download-artifact@v5
+        uses: actions/download-artifact@v7
         with:
           name: built-packages
           path: packages

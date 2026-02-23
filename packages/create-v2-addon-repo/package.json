@@ -1,6 +1,6 @@
 {
   "name": "create-v2-addon-repo",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Create a repo with v2 addons",
   "keywords": [
     "codemod",

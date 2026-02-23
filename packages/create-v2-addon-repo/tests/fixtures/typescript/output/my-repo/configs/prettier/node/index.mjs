@@ -1,1 +1,1 @@
-export { default } from '@ijlee2-frontend-configs/prettier/ember';
+export { default } from '@ijlee2-frontend-configs/prettier/node';

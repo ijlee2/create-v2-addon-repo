@@ -139,7 +139,7 @@ pnpm update-blueprints --to 0.5.0
 
 ## Compatibility
 
-- Node.js v20 or above
+- Node.js v22 or above
 
 
 ## License

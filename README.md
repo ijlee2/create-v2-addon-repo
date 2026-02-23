@@ -72,7 +72,7 @@ pnpm addon new @my-org-ui/form --location ui/form
 
 ## Compatibility
 
-- Node.js v20 or above
+- Node.js v22 or above
 
 
 ## Contributing

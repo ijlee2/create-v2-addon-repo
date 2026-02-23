@@ -7,22 +7,6 @@ import { createFiles, findFiles } from '@codemod-utils/files';
 import type { Options } from '../../../types/run-generate.js';
 import { blueprintsRoot } from '../../../utils/blueprints.js';
 
-function getFilesToSkip(options: Options): string[] {
-  const { entity } = options;
-
-  switch (entity.type) {
-    case 'component':
-    case 'helper':
-    case 'modifier': {
-      return ['__fileName__.gts'];
-    }
-
-    default: {
-      return [];
-    }
-  }
-}
-
 function resolveBlueprintFilePath(
   blueprintFilePath: string,
   options: Options,
@@ -52,8 +36,6 @@ function resolveBlueprintFilePath(
 export function createTestFile(appRoot: string, options: Options): void {
   const { entity } = options;
 
-  const filesToSkip = getFilesToSkip(options);
-
   const cwd = join(
     blueprintsRoot,
     'run-generate',
@@ -62,7 +44,6 @@ export function createTestFile(appRoot: string, options: Options): void {
   );
 
   const blueprintFilePaths = findFiles('**/*', {
-    ignoreList: filesToSkip,
     projectRoot: cwd,
   });
 

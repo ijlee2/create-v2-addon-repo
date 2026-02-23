@@ -9,12 +9,12 @@ function getPattern(options: Options): string {
     case 'component':
     case 'helper':
     case 'modifier': {
-      return `tests/integration/${entity.type}s/${entity.name}-test.*`;
+      return `tests/integration/${entity.type}s/${entity.name}-test.{gjs,gts,js,ts}`;
     }
 
     case 'service':
     case 'util': {
-      return `tests/unit/${entity.type}s/${entity.name}-test.*`;
+      return `tests/unit/${entity.type}s/${entity.name}-test.{js,ts}`;
     }
   }
 }

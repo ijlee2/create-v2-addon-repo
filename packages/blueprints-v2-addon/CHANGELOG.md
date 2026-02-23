@@ -1,5 +1,11 @@
 # blueprints-v2-addon
 
+## 2.1.2
+
+### Patch Changes
+
+- [#123](https://github.com/ijlee2/create-v2-addon-repo/pull/123) Allowed generate to create the test file ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.1.1
 
 ### Patch Changes

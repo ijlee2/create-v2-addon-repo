@@ -6,7 +6,7 @@
   "type": "module",
   "exports": {
     "./ember": "./ember/index.json",
-    "./node20": "./node20/index.json"
+    "./node": "./node/index.json"
   },
   "scripts": {
     "lint": "prettier \"**/*.{json,mjs}\" --cache --check",

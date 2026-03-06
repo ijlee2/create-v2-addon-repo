@@ -1,6 +1,6 @@
 {
   "name": "blueprints-v2-addon",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "private": true,
   "description": "Blueprints for v2 addons",
   "keywords": [
@@ -35,8 +35,8 @@
   },
   "dependencies": {
     "@codemod-utils/ast-javascript": "^3.0.0",
-    "@codemod-utils/blueprints": "^3.0.0",
-    "@codemod-utils/ember": "^4.0.0",
+    "@codemod-utils/blueprints": "^3.0.1",
+    "@codemod-utils/ember": "^4.1.0",
     "@codemod-utils/files": "^4.0.0",
     "@codemod-utils/package-json": "^4.0.0",
     "yargs": "^18.0.0"
@@ -50,7 +50,7 @@
     "@types/node": "^22.19.11",
     "@types/yargs": "^17.0.35",
     "concurrently": "^9.2.1",
-    "eslint": "^9.39.2",
+    "eslint": "^9.39.3",
     "git-diff-apply": "^7.0.5",
     "prettier": "^3.8.1",
     "typescript": "^5.9.3"

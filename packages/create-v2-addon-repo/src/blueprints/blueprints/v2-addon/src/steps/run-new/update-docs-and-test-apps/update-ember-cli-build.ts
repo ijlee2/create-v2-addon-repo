@@ -37,6 +37,7 @@ function updateSideWatch(file: string, options: Options): string {
       ].sort();
 
       watching.value.elements = paths.map((path) => {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         return AST.builders.stringLiteral(path);
       });
 

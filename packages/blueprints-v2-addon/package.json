@@ -10,7 +10,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ijlee2/create-v2-addon-repo.git"
+    "url": "https://github.com/ijlee2/create-v2-addon-repo.git",
+    "directory": "packages/blueprints-v2-addon"
   },
   "license": "MIT",
   "author": "Isaac J. Lee",

@@ -8,8 +8,6 @@ interface MyComponentGlimmerSignature {
 
 export default class MyComponentGlimmer extends Component<MyComponentGlimmerSignature> {
   <template>
-    <div class={{styles.container}}>
-      {{yield}}
-    </div>
+    <div class={{styles.container}}></div>
   </template>
 }

@@ -1,0 +1,40 @@
+.container {
+  display: grid;
+  grid-template-areas:
+    ". header ."
+    "main main main"
+    ". footer .";
+  grid-template-columns: 1fr minmax(auto, 75rem) 1fr;
+  grid-template-rows: auto 1fr auto;
+  height: 100%;
+  overflow: hidden;
+  width: 100vw;
+}
+
+.header {
+  grid-area: header;
+  overflow-x: auto;
+}
+
+.main {
+  display: flex;
+  flex: 1;
+  grid-area: main;
+  justify-content: center;
+  overflow-y: hidden;
+}
+
+.center {
+  display: flex;
+  flex-direction: column;
+  max-width: 75rem;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.footer {
+  align-items: center;
+  display: flex;
+  grid-area: footer;
+  justify-content: center;
+}

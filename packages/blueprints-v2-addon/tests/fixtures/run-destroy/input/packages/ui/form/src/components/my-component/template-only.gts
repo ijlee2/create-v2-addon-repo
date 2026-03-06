@@ -6,10 +6,8 @@ interface MyComponentTemplateOnlySignature {
   Args: {};
 }
 
-const MyComponentTemplateOnly = <template>
-  <div class={{styles.container}}>
-    {{yield}}
-  </div>
-</template> satisfies TOC<MyComponentTemplateOnlySignature>;
+const MyComponentTemplateOnly: TOC<MyComponentTemplateOnlySignature> = <template>
+  <div class={{styles.container}}></div>
+</template>;
 
 export default MyComponentTemplateOnly;

@@ -1,6 +1,6 @@
 {
   "name": "blueprints-v2-addon",
-  "version": "3.0.1",
+  "version": "3.1.0",
   "private": true,
   "description": "Blueprints for v2 addons",
   "keywords": [
@@ -10,7 +10,8 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ijlee2/create-v2-addon-repo.git"
+    "url": "https://github.com/ijlee2/create-v2-addon-repo.git",
+    "directory": "packages/blueprints-v2-addon"
   },
   "license": "MIT",
   "author": "Isaac J. Lee",

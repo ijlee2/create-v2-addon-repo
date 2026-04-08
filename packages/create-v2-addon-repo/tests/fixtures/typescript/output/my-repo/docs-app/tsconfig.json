@@ -1,5 +1,5 @@
 {
-  "extends": "@shared-configs/typescript/ember",
+  "extends": "@shared-configs/typescript/ember-app",
   "compilerOptions": {
     "baseUrl": ".",
     "paths": {
@@ -7,6 +7,11 @@
       "docs-app/*": ["app/*"],
       "*": ["types/*"]
     },
+    "plugins": [
+      {
+        "name": "@glint/tsserver-plugin"
+      }
+    ],
     "types": [
       "ember-source/types",
       "@embroider/core/virtual",
@@ -14,5 +19,5 @@
       "vite/client"
     ]
   },
-  "include": ["app/**/*", "tests/**/*", "types/**/*"]
+  "include": ["app/**/*", "tests/**/*", "types/**/*", "vite.config.mts"]
 }

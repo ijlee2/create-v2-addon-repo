@@ -1,5 +1,19 @@
 # create-v2-addon-repo
 
+## 3.0.0
+
+### Major Changes
+
+- [#128](https://github.com/ijlee2/create-v2-addon-repo/pull/128) Updated blueprints ([@ijlee2](https://github.com/ijlee2))
+- [#126](https://github.com/ijlee2/create-v2-addon-repo/pull/126) Converted test-app to Vite ([@ijlee2](https://github.com/ijlee2))
+- [#125](https://github.com/ijlee2/create-v2-addon-repo/pull/125) Updated blueprints (blueprints-v2-addon) ([@ijlee2](https://github.com/ijlee2))
+- [#122](https://github.com/ijlee2/create-v2-addon-repo/pull/122) Dropped support for Node 20 ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#127](https://github.com/ijlee2/create-v2-addon-repo/pull/127) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+- [#124](https://github.com/ijlee2/create-v2-addon-repo/pull/124) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 2.1.2
 
 ### Patch Changes

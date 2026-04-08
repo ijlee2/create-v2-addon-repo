@@ -5,7 +5,8 @@
   "description": "Configuration for typescript",
   "type": "module",
   "exports": {
-    "./ember": "./ember/index.json",
+    "./ember-addon": "./ember-addon/index.json",
+    "./ember-app": "./ember-app/index.json",
     "./node": "./node/index.json"
   },
   "scripts": {
@@ -13,7 +14,8 @@
     "lint:fix": "prettier \"**/*.{json,mjs}\" --cache --write"
   },
   "dependencies": {
-    "@tsconfig/ember": "^3.0.12",
+    "@ember/app-tsconfig": "^2.0.0",
+    "@ember/library-tsconfig": "^2.0.0",
     "@tsconfig/node22": "^22.0.5",
     "@tsconfig/strictest": "^2.0.8"
   },

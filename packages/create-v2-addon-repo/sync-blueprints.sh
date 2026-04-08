@@ -4,15 +4,20 @@
 #
 #  A. Purpose
 #
-#    Copies `src` and `tests` from the `blueprints-v2-addon` package.
+#    Ensures correct blueprints files.
 #
 #  B. Usage
 #
-#    ./update-blueprints-v2-addon.sh
+#    ./sync-blueprints.sh
 #
 #---------
 
-# Copy files
+# Copy files from `configs` to `src/blueprints/configs`
+rm -r "src/blueprints/configs"
+
+rsync --archive "../../configs" "src/blueprints" --exclude "node_modules" --exclude ".eslintcache"
+
+# Copy files from `packages/blueprints-v2-addon` to `src/blueprints/blueprints`
 rm -r "src/blueprints/blueprints"
 mkdir "src/blueprints/blueprints"
 mkdir "src/blueprints/blueprints/v2-addon"

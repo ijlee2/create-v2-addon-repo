@@ -19,15 +19,14 @@ Create a batteries-included project fast:
 - Run `generate` and `destroy` commands to create and remove files
 - Tailor blueprints to your needs, or stay close to the default with `update-blueprints` command
 - Explore bleeding-edge Ember: Embroider app, `embroider-css-modules`, `glint`, `<template>` tag out of the box
-- Maintain project like a pro: lint, test, CI, and documentation out of the box
 
 
 ## Usage
 
-Step 1. Use `npx` to run `create-v2-addon-repo`.
+Step 1. Use `pnpx` to run `create-v2-addon-repo`.
 
 ```sh
-npx create-v2-addon-repo <your-project-name>
+pnpx create-v2-addon-repo <your-project-name>
 ```
 
 This will create a folder named `<your-project-name>`.

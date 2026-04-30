@@ -15,16 +15,16 @@ function removeImportStatement(
   const { entity } = options;
 
   const traverse = AST.traverse(true);
-  let localName;
+  let localName: string | undefined;
 
   const ast = traverse(file, {
     visitImportDeclaration(path) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-      const resource = path.value.source.value as string;
+      const resource = path.node.source.value as string;
 
       if (resource.startsWith(`./${entity.type}s/${entity.name}`)) {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-        localName = path.value.specifiers[0].local.name;
+        const specifiers = path.node.specifiers ?? [];
+
+        localName = specifiers[0]?.local?.name as string | undefined;
 
         return null;
       }
@@ -44,23 +44,21 @@ function updateRegistry(file: string, localName: string | undefined): string {
 
   const ast = traverse(file, {
     visitExportDefaultDeclaration(path) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-      const registry = path.value.declaration;
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-      const registryEntries = registry.body.body;
+      const registry = path.node.declaration;
 
-      // @ts-expect-error: Assume that types from external packages are correct
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-      registry.body.body = registryEntries.filter((registryEntry) => {
+      if (registry.type !== 'TSInterfaceDeclaration') {
+        return false;
+      }
+
+      registry.body.body = registry.body.body.filter((registryEntry) => {
         if (
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
-          registryEntry.typeAnnotation.typeAnnotation.type !== 'TSTypeQuery'
+          registryEntry.typeAnnotation?.typeAnnotation?.type !== 'TSTypeQuery'
         ) {
           return true;
         }
 
         return (
-          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
+          // @ts-expect-error: Incorrect type
           registryEntry.typeAnnotation.typeAnnotation.exprName.name !==
           localName
         );

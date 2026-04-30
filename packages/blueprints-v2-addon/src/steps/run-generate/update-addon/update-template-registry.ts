@@ -62,13 +62,13 @@ function updateRegistry(file: string, options: Options): string {
 
   const ast = traverse(file, {
     visitExportDefaultDeclaration(path) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-      const registry = path.value.declaration;
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
-      const registryEntries = registry.body.body;
+      const registry = path.node.declaration;
 
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-      registryEntries.splice(
+      if (registry.type !== 'TSInterfaceDeclaration') {
+        return false;
+      }
+
+      registry.body.body.splice(
         0,
         0,
         AST.builders.tsPropertySignature(
@@ -80,8 +80,7 @@ function updateRegistry(file: string, options: Options): string {
       );
 
       if (entity.type === 'component') {
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
-        registryEntries.splice(
+        registry.body.body.splice(
           0,
           0,
           AST.builders.tsPropertySignature(

@@ -12,6 +12,7 @@ function removeExportStatement(file: string, options: Options): string {
 
   const ast = traverse(file, {
     visitExportNamedDeclaration(path) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       const resource = path.value.source.value as string;
 
       if (resource.startsWith(`./${entity.type}s/${entity.name}`)) {

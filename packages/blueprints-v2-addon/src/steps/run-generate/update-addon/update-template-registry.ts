@@ -62,9 +62,12 @@ function updateRegistry(file: string, options: Options): string {
 
   const ast = traverse(file, {
     visitExportDefaultDeclaration(path) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
       const registry = path.value.declaration;
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
       const registryEntries = registry.body.body;
 
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
       registryEntries.splice(
         0,
         0,
@@ -77,6 +80,7 @@ function updateRegistry(file: string, options: Options): string {
       );
 
       if (entity.type === 'component') {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
         registryEntries.splice(
           0,
           0,

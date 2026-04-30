@@ -19,9 +19,11 @@ function removeImportStatement(
 
   const ast = traverse(file, {
     visitImportDeclaration(path) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
       const resource = path.value.source.value as string;
 
       if (resource.startsWith(`./${entity.type}s/${entity.name}`)) {
+        // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
         localName = path.value.specifiers[0].local.name;
 
         return null;
@@ -42,18 +44,23 @@ function updateRegistry(file: string, localName: string | undefined): string {
 
   const ast = traverse(file, {
     visitExportDefaultDeclaration(path) {
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
       const registry = path.value.declaration;
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-member-access
       const registryEntries = registry.body.body;
 
       // @ts-expect-error: Assume that types from external packages are correct
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment, @typescript-eslint/no-unsafe-call, @typescript-eslint/no-unsafe-member-access
       registry.body.body = registryEntries.filter((registryEntry) => {
         if (
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
           registryEntry.typeAnnotation.typeAnnotation.type !== 'TSTypeQuery'
         ) {
           return true;
         }
 
         return (
+          // eslint-disable-next-line @typescript-eslint/no-unsafe-member-access
           registryEntry.typeAnnotation.typeAnnotation.exprName.name !==
           localName
         );

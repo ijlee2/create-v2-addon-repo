@@ -62,10 +62,13 @@ function updateRegistry(file: string, options: Options): string {
 
   const ast = traverse(file, {
     visitExportDefaultDeclaration(path) {
-      const registry = path.value.declaration;
-      const registryEntries = registry.body.body;
+      const registry = path.node.declaration;
 
-      registryEntries.splice(
+      if (registry.type !== 'TSInterfaceDeclaration') {
+        return false;
+      }
+
+      registry.body.body.splice(
         0,
         0,
         AST.builders.tsPropertySignature(
@@ -77,7 +80,7 @@ function updateRegistry(file: string, options: Options): string {
       );
 
       if (entity.type === 'component') {
-        registryEntries.splice(
+        registry.body.body.splice(
           0,
           0,
           AST.builders.tsPropertySignature(

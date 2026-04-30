@@ -15,14 +15,16 @@ function removeImportStatement(
   const { entity } = options;
 
   const traverse = AST.traverse(true);
-  let localName;
+  let localName: string | undefined;
 
   const ast = traverse(file, {
     visitImportDeclaration(path) {
-      const resource = path.value.source.value as string;
+      const resource = path.node.source.value as string;
 
       if (resource.startsWith(`./${entity.type}s/${entity.name}`)) {
-        localName = path.value.specifiers[0].local.name;
+        const specifiers = path.node.specifiers ?? [];
+
+        localName = specifiers[0]?.local?.name as string | undefined;
 
         return null;
       }
@@ -42,18 +44,21 @@ function updateRegistry(file: string, localName: string | undefined): string {
 
   const ast = traverse(file, {
     visitExportDefaultDeclaration(path) {
-      const registry = path.value.declaration;
-      const registryEntries = registry.body.body;
+      const registry = path.node.declaration;
 
-      // @ts-expect-error: Assume that types from external packages are correct
-      registry.body.body = registryEntries.filter((registryEntry) => {
+      if (registry.type !== 'TSInterfaceDeclaration') {
+        return false;
+      }
+
+      registry.body.body = registry.body.body.filter((registryEntry) => {
         if (
-          registryEntry.typeAnnotation.typeAnnotation.type !== 'TSTypeQuery'
+          registryEntry.typeAnnotation?.typeAnnotation?.type !== 'TSTypeQuery'
         ) {
           return true;
         }
 
         return (
+          // @ts-expect-error: Incorrect type
           registryEntry.typeAnnotation.typeAnnotation.exprName.name !==
           localName
         );

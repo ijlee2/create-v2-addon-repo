@@ -1,5 +1,15 @@
 # create-v2-addon-repo
 
+## 3.1.0
+
+### Minor Changes
+
+- [#129](https://github.com/ijlee2/create-v2-addon-repo/pull/129) Fixed lint errors ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#130](https://github.com/ijlee2/create-v2-addon-repo/pull/130) Updated dependencies in blueprints ([@ijlee2](https://github.com/ijlee2))
+
 ## 3.0.0
 
 ### Major Changes

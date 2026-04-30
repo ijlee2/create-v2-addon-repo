@@ -21,6 +21,7 @@ function updateDevDependencies(
 
   devDependencies.set(addon.name, 'workspace:*');
 
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
   packageJson['devDependencies'] = convertToObject(devDependencies);
 }
 

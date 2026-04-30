@@ -12,7 +12,11 @@ function removeExportStatement(file: string, options: Options): string {
 
   const ast = traverse(file, {
     visitExportNamedDeclaration(path) {
-      const resource = path.value.source.value as string;
+      if (!path.node.source) {
+        return false;
+      }
+
+      const resource = path.node.source.value as string;
 
       if (resource.startsWith(`./${entity.type}s/${entity.name}`)) {
         return null;

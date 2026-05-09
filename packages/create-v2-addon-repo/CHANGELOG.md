@@ -1,5 +1,12 @@
 # create-v2-addon-repo
 
+## 3.1.1
+
+### Patch Changes
+
+- [#132](https://github.com/ijlee2/create-v2-addon-repo/pull/132) Updated blueprints ([@ijlee2](https://github.com/ijlee2))
+- [#131](https://github.com/ijlee2/create-v2-addon-repo/pull/131) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 3.1.0
 
 ### Minor Changes

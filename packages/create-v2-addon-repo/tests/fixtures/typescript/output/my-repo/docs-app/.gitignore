@@ -10,7 +10,6 @@
 /.pnp*
 /.eslintcache
 /.stylelintcache
-/coverage/
 /testem.log
 
 # broccoli-debug

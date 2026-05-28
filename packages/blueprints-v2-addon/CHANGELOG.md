@@ -1,5 +1,15 @@
 # blueprints-v2-addon
 
+## 3.2.0
+
+### Minor Changes
+
+- [#133](https://github.com/ijlee2/create-v2-addon-repo/pull/133) Updated `@codemod-utils/ast-javascript` to v4 ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#134](https://github.com/ijlee2/create-v2-addon-repo/pull/134) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 3.1.1
 
 ### Patch Changes

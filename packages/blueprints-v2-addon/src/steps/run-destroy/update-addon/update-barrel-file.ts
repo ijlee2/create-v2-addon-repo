@@ -8,9 +8,7 @@ import type { Options } from '../../../types/run-destroy.js';
 function removeExportStatement(file: string, options: Options): string {
   const { entity } = options;
 
-  const traverse = AST.traverse();
-
-  const ast = traverse(file, {
+  const ast = AST.traverse(file, {
     visitExportNamedDeclaration(path) {
       if (!path.node.source) {
         return false;

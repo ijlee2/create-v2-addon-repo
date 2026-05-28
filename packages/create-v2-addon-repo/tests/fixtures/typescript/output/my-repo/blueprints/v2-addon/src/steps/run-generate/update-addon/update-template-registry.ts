@@ -58,7 +58,7 @@ function updateRegistry(file: string, options: Options): string {
   const { entity } = options;
   const localName = getLocalName(options);
 
-  const traverse = AST.traverse(true);
+  const traverse = AST.traverse();
 
   const ast = traverse(file, {
     visitExportDefaultDeclaration(path) {

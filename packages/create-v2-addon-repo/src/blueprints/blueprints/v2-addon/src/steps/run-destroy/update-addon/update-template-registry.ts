@@ -14,7 +14,7 @@ function removeImportStatement(
 } {
   const { entity } = options;
 
-  const traverse = AST.traverse(true);
+  const traverse = AST.traverse();
   let localName: string | undefined;
 
   const ast = traverse(file, {
@@ -40,7 +40,7 @@ function removeImportStatement(
 }
 
 function updateRegistry(file: string, localName: string | undefined): string {
-  const traverse = AST.traverse(true);
+  const traverse = AST.traverse();
 
   const ast = traverse(file, {
     visitExportDefaultDeclaration(path) {

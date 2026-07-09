@@ -1,1 +1,1 @@
-export function myUtilFunction() {}
+export function myUtilFunction(): void {}

@@ -1,1 +1,1 @@
-export function <%= options.entity.camelizedName %>() {}
+export function <%= options.entity.camelizedName %>(): void {}

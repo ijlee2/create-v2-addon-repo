@@ -21,19 +21,6 @@ importers:
         specifier: ^3.0.4
         version: 3.0.4
 
-  configs/ember-template-lint:
-    dependencies:
-      '@ijlee2-frontend-configs/ember-template-lint':
-        specifier: ^3.0.1
-        version: 3.0.1
-    devDependencies:
-      '@shared-configs/prettier':
-        specifier: workspace:*
-        version: link:../prettier
-      prettier:
-        specifier: ^3.9.4
-        version: 3.9.4
-
   configs/eslint/ember:
     dependencies:
       '@ijlee2-frontend-configs/eslint-config-ember':
@@ -558,12 +545,6 @@ packages:
     engines: {node: 22.* || >= 24}
     peerDependencies:
       '@changesets/cli': ^2.31.0
-
-  '@ijlee2-frontend-configs/ember-template-lint@3.0.1':
-    resolution: {integrity: sha512-fqMd7CeiEg/K0Ca07ZtPzffu2KV5pvBP60z0i6WQM+L9zq9PDywA1q707tXif1Q0VZ0Dw1beX9+zhtGZpgWBEQ==}
-    engines: {node: 22.* || >= 24}
-    peerDependencies:
-      ember-template-lint: ^7.9.3
 
   '@ijlee2-frontend-configs/eslint-config-ember@4.1.0':
     resolution: {integrity: sha512-GcqziZ0q2z/30SnHpiqfMS7bZEV4Oa7F0mUcHVwJ8t9FeOPl9pjCLX/6A/XlDK/ft9MPG9L6QxmQNwB3i/omdA==}
@@ -2606,8 +2587,6 @@ snapshots:
       '@changesets/get-github-info': 0.8.0
     transitivePeerDependencies:
       - encoding
-
-  '@ijlee2-frontend-configs/ember-template-lint@3.0.1': {}
 
   '@ijlee2-frontend-configs/eslint-config-ember@4.1.0(@typescript-eslint/parser@8.63.0(eslint@10.6.0)(typescript@6.0.3))(@typescript-eslint/utils@8.63.0(eslint@10.6.0)(typescript@6.0.3))(eslint@10.6.0)(typescript@6.0.3)':
     dependencies:

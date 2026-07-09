@@ -18,12 +18,17 @@
   },
   "devDependencies": {
     "blueprints-v2-addon": "workspace:*",
-    "concurrently": "^10.0.0",
-    "sort-package-json": "^3.6.1"
+    "concurrently": "^10.0.3",
+    "sort-package-json": "^4.0.0"
   },
-  "packageManager": "pnpm@10.34.1",
+  "packageManager": "pnpm@10.34.4",
   "engines": {
     "node": "22.* || >= 24",
     "pnpm": ">= 10"
+  },
+  "pnpm": {
+    "overrides": {
+      "ember-cli-htmlbars": "^7.0.1"
+    }
   }
 }

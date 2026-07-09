@@ -1,5 +1,15 @@
 # create-v2-addon-repo
 
+## 4.0.0
+
+### Major Changes
+
+- [#137](https://github.com/ijlee2/create-v2-addon-repo/pull/137) Updated dependencies (babel@v8, ember-source@v7, eslint@v10, typescript@v6). Removed ember-template-lint. ([@ijlee2](https://github.com/ijlee2))
+
+### Minor Changes
+
+- [#136](https://github.com/ijlee2/create-v2-addon-repo/pull/136) Updated dependencies (eslint@v10, typescript@v6) ([@ijlee2](https://github.com/ijlee2))
+
 ## 3.2.1
 
 ### Patch Changes

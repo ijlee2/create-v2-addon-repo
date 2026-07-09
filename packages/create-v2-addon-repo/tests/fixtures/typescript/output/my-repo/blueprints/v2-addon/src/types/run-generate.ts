@@ -1,7 +1,7 @@
 type EntityType =
   | {
-      blueprint: 'glimmer' | 'template-only';
-      type: 'component';
+      blueprint: 'class';
+      type: 'service';
     }
   | {
       blueprint: 'class' | 'function';
@@ -12,12 +12,12 @@ type EntityType =
       type: 'modifier';
     }
   | {
-      blueprint: 'class';
-      type: 'service';
-    }
-  | {
       blueprint: 'function';
       type: 'util';
+    }
+  | {
+      blueprint: 'glimmer' | 'template-only';
+      type: 'component';
     };
 
 type CodemodOptions = {

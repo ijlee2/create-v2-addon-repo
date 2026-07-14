@@ -1,5 +1,11 @@
 # create-v2-addon-repo
 
+## 4.1.1
+
+### Patch Changes
+
+- [#140](https://github.com/ijlee2/create-v2-addon-repo/pull/140) Re-released 4.1.0 ([@ijlee2](https://github.com/ijlee2))
+
 ## 4.1.0
 
 ### Minor Changes

@@ -1,6 +1,29 @@
+allowBuilds:
+  unrs-resolver: false
+
+autoInstallPeers: false
+
+minimumReleaseAgeExclude:
+  - "@codemod-utils/*"
+  - "@ijlee2-frontend-configs/*"
+  - "@typescript-eslint/*"
+  - typescript-eslint
+
+overrides:
+  ember-cli-htmlbars: ^7.0.1
+
 packages:
-  - blueprints/*
-  - configs/**
-  - docs-app
-  - packages/**
-  - test-app
+  - "blueprints/v2-addon"
+  - "configs/**"
+  - "docs-app"
+  - "packages/**"
+  - "test-app"
+
+publicHoistPattern:
+  - "*eslint*"
+  - "*prettier*"
+  - "*stylelint*"
+
+resolvePeersFromWorkspaceRoot: false
+
+verifyDepsBeforeRun: "warn"

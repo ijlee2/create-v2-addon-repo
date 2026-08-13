@@ -144,7 +144,7 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^22.20.0
+        specifier: ^22.20.1
         version: 22.20.1
       '@types/yargs':
         specifier: ^17.0.35
@@ -193,7 +193,7 @@ importers:
         specifier: ^0.1.2
         version: 0.1.2
       '@types/node':
-        specifier: ^22.20.0
+        specifier: ^22.20.1
         version: 22.20.1
       '@types/yargs':
         specifier: ^17.0.35

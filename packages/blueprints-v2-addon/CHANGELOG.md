@@ -1,5 +1,15 @@
 # blueprints-v2-addon
 
+## 4.3.0
+
+### Minor Changes
+
+- [#146](https://github.com/ijlee2/create-v2-addon-repo/pull/146) Updated blueprints ([@ijlee2](https://github.com/ijlee2))
+
+### Patch Changes
+
+- [#145](https://github.com/ijlee2/create-v2-addon-repo/pull/145) Updated dependencies ([@ijlee2](https://github.com/ijlee2))
+
 ## 4.2.1
 
 ### Patch Changes

@@ -20,5 +20,5 @@
       "vite/client"
     ]
   },
-  "include": ["app/**/*", "tests/**/*", "types/**/*", "vite.config.mts"]
+  "include": ["app/**/*", "tests/**/*", "types/**/*", "*.mts"]
 }

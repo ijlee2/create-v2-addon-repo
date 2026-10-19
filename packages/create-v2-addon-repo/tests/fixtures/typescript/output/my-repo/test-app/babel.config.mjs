@@ -5,9 +5,6 @@ import {
   babelCompatSupport,
   templateCompatSupport,
 } from '@embroider/compat/babel';
-import { stripPropertiesPlugin } from 'strip-test-selectors';
-
-const isProduction = process.env.NODE_ENV === 'production';
 
 export default {
   generatorOpts: {
@@ -30,10 +27,7 @@ export default {
           'ember-cli-htmlbars-inline-precompile',
           'htmlbars-inline-precompile',
         ],
-        transforms: [
-          ...templateCompatSupport(),
-          ...(isProduction ? ['strip-test-selectors'] : []),
-        ],
+        transforms: [...templateCompatSupport()],
       },
     ],
     [
@@ -53,6 +47,5 @@ export default {
       },
     ],
     ...babelCompatSupport(),
-    ...(isProduction ? [stripPropertiesPlugin()] : []),
   ],
 };

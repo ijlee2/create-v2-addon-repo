@@ -1,16 +1,16 @@
 allowBuilds:
   unrs-resolver: false
 
+autoDedupe: true
+
 autoInstallPeers: false
 
-minimumReleaseAge: 720
+lockfile:
+  includeResolutionSettings: true
 
 minimumReleaseAgeExclude:
   - "@codemod-utils/*"
   - "@ijlee2-frontend-configs/*"
-
-overrides:
-  ember-cli-htmlbars: ^7.0.1
 
 packages:
   - "blueprints/v2-addon"

@@ -1,7 +1,12 @@
 allowBuilds:
   unrs-resolver: false
 
+autoDedupe: true
+
 autoInstallPeers: false
+
+lockfile:
+  includeResolutionSettings: true
 
 minimumReleaseAge: 720
 

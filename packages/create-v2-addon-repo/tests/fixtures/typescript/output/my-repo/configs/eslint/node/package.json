@@ -5,8 +5,8 @@
   "description": "Configuration for eslint (Node)",
   "type": "module",
   "exports": {
-    "./javascript": "./javascript/index.mjs",
-    "./typescript": "./typescript/index.mjs"
+    "./javascript": "./src/javascript.js",
+    "./typescript": "./src/typescript.js"
   },
   "scripts": {
     "format": "prettier . --cache --write",
@@ -17,16 +17,16 @@
     "lint:js:fix": "eslint . --fix"
   },
   "dependencies": {
-    "@ijlee2-frontend-configs/eslint-config-node": "^4.8.1"
+    "@ijlee2-frontend-configs/eslint-config-node": "^4.10.0"
   },
   "devDependencies": {
     "@shared-configs/prettier": "workspace:*",
-    "concurrently": "^10.0.6",
-    "eslint": "^10.13.0",
-    "prettier": "^3.9.10"
+    "concurrently": "^10.0.7",
+    "eslint": "^10.15.0",
+    "prettier": "^3.10.1"
   },
   "peerDependencies": {
-    "eslint": "^10.13.0",
+    "eslint": "^10.15.0",
     "typescript": "^6.0.3"
   },
   "peerDependenciesMeta": {

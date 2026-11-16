@@ -20,6 +20,7 @@ packages:
   - "packages/create-v2-addon-repo"
 
 publicHoistPattern:
+  - "@tsconfig/*"
   - "*eslint*"
   - "*prettier*"
   - "*stylelint*"

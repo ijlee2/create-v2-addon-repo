@@ -5,8 +5,8 @@
   "description": "Configuration for eslint (Node)",
   "type": "module",
   "exports": {
-    "./javascript": "./javascript/index.mjs",
-    "./typescript": "./typescript/index.mjs"
+    "./javascript": "./src/javascript.js",
+    "./typescript": "./src/typescript.js"
   },
   "scripts": {
     "format": "prettier . --cache --write",

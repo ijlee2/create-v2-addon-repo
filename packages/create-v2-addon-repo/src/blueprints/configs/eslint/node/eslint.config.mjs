@@ -1,1 +1,1 @@
-export { default } from './javascript/index.mjs';
+export { default } from './src/javascript.js';
